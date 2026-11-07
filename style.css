@@ -2405,6 +2405,42 @@ body::before {
 
 
 /* =========================
+   CURSOR REDESIGN (smaller)
+========================= */
+
+/* Tiny center dot */
+.cursor-dot {
+    width: 4px;
+    height: 4px;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+/* Follower: a small diamond instead of a big circle */
+.cursor-outline {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--accent);
+    border-radius: 3px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition:
+        width .25s ease,
+        height .25s ease,
+        border-radius .25s ease,
+        transform .35s ease,
+        background .25s ease;
+}
+
+/* Over links, buttons and cards: diamond rounds into a soft ring and turns */
+.cursor-outline.cursor-hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    background: rgba(197, 244, 103, .14);
+}
+
+
+/* =========================
    TOUCH DEVICES
 ========================= */
 

@@ -26,6 +26,8 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
+    <div class="scroll-progress" id="scroll-progress"></div>
+
 
     <!-- NAVIGATION -->
 
@@ -47,6 +49,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#journey">JOURNEY</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
 
                 <li>
@@ -83,13 +86,18 @@
 
                 <div class="hero-text reveal">
 
-                    <p class="eyebrow">HELLO, I'M</p>
+                    <p class="eyebrow" id="greeting">HELLO, I'M</p>
 
                     <h1>
                         IVANN<span class="outline">.</span>
                         <br>
                         <span class="surname">MULLES</span>
                     </h1>
+
+
+                    <p class="role-line">
+                        <span class="role-prefix">&gt;</span><span id="typed"></span><span class="caret"></span>
+                    </p>
 
 
                     <div class="hero-bottom">
@@ -140,6 +148,38 @@
                     <span>DESIGN ✳ DEVELOP ✳ LEARN ✳ CREATE ✳ </span>
                     <span>DESIGN ✳ DEVELOP ✳ LEARN ✳ CREATE ✳ </span>
 
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUICK FACTS -->
+
+        <section class="stats" id="stats" aria-label="Quick facts">
+
+            <div class="stats-grid">
+
+                <div class="stat reveal">
+                    <b class="count" data-target="2">00</b>
+                    <span>YEAR LEVEL · IT</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.1s">
+                    <b class="count" data-target="3">00</b>
+                    <span>PROJECTS</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.2s">
+                    <b class="count" data-target="5">00</b>
+                    <span>SKILLS &amp; TOOLS</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.3s">
+                    <b>∞</b>
+                    <span>CURIOSITY</span>
                 </div>
 
             </div>
@@ -199,6 +239,45 @@
 
 
                     <span class="signature">Ivann Mulles ✳</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-extra">
+
+                <div class="terminal reveal" id="terminal" aria-label="Decorative terminal introducing Ivann">
+
+                    <div class="terminal-bar">
+                        <i></i><i></i><i></i>
+                        <span>ivann@portfolio:~</span>
+                    </div>
+
+                    <div class="terminal-body" id="terminal-body"></div>
+
+                </div>
+
+
+                <div class="focus-grid">
+
+                    <article class="focus-card reveal">
+                        <span>01</span>
+                        <h3>CYBERSECURITY</h3>
+                        <p>A keen interest I want to dig deeper into.</p>
+                    </article>
+
+                    <article class="focus-card reveal" style="transition-delay:.1s">
+                        <span>02</span>
+                        <h3>PROGRAMMING</h3>
+                        <p>Python, C++ and Java, building logic and problem-solving skills.</p>
+                    </article>
+
+                    <article class="focus-card reveal" style="transition-delay:.2s">
+                        <span>03</span>
+                        <h3>EXPLORING IT</h3>
+                        <p>Actively exploring diverse fields to expand my knowledge.</p>
+                    </article>
 
                 </div>
 
@@ -282,13 +361,65 @@
 
 
 
+        <!-- JOURNEY SECTION -->
+
+        <section class="section journey-section" id="journey">
+
+            <div class="section-top reveal">
+
+                <span>03 / MY JOURNEY</span>
+                <span>SO FAR</span>
+
+            </div>
+
+
+            <h2 class="section-title reveal">
+                THE <span>ROAD</span> SO FAR.
+            </h2>
+
+
+            <div class="timeline reveal">
+
+                <div class="timeline-line"></div>
+                <div class="timeline-fill"></div>
+
+                <div class="timeline-item reveal">
+                    <span class="t-tag">TUP–MANILA</span>
+                    <h3>Information Technology</h3>
+                    <p>Studying IT at the Technological University of the Philippines–Manila.</p>
+                </div>
+
+                <div class="timeline-item reveal" style="transition-delay:.15s">
+                    <span class="t-tag">COMPUTER PROGRAMMING 1</span>
+                    <h3>Randomized Maze Game</h3>
+                    <p>Built a maze game with randomized mechanics as our final project.</p>
+                </div>
+
+                <div class="timeline-item reveal" style="transition-delay:.3s">
+                    <span class="t-tag">COMPUTER PROGRAMMING 2</span>
+                    <h3>Arithmetic Quiz Game</h3>
+                    <p>Created a C++ game that tests arithmetic skills as our final project.</p>
+                </div>
+
+                <div class="timeline-item now reveal" style="transition-delay:.45s">
+                    <span class="t-tag">NOW</span>
+                    <h3>Building in Java</h3>
+                    <p>Working on an E-Commerce Product Management system while exploring cybersecurity.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
         <!-- PROJECTS SECTION -->
 
         <section class="section projects-section" id="projects">
 
             <div class="section-top reveal">
 
-                <span>03 / SELECTED WORK</span>
+                <span>04 / SELECTED WORK</span>
                 <span>MY PROJECTS</span>
 
             </div>
@@ -338,6 +469,12 @@
                         Computer Programming 1.
                     </p>
 
+
+                    <div class="project-tags">
+                        <span>COURSE PROJECT</span>
+                        <span>COMPLETED</span>
+                    </div>
+
                 </article>
 
 
@@ -376,6 +513,13 @@
                         Computer Programming 2.
                     </p>
 
+
+                    <div class="project-tags">
+                        <span>C++</span>
+                        <span>COURSE PROJECT</span>
+                        <span>COMPLETED</span>
+                    </div>
+
                 </article>
 
 
@@ -413,19 +557,25 @@
                         Still a work in progress.
                     </p>
 
+
+                    <div class="project-tags">
+                        <span>JAVA</span>
+                        <span class="live">IN PROGRESS</span>
+                    </div>
+
                 </article>
 
 
 
                 <!-- PROJECT 4 -->
 
-                <article class="project-card reveal">
+                <article class="project-card project-soon reveal">
 
                     <div class="project-visual visual-four">
 
                         <span>04</span>
 
-                        <div>CREATIVE<br>IDEAS</div>
+                        <div>COMING<br>SOON</div>
 
                     </div>
 
@@ -434,9 +584,9 @@
 
                         <div>
 
-                            <span>04 / CREATIVE PROJECT</span>
+                            <span>04 / NEXT UP</span>
 
-                            <h3>Digital Design Experiments</h3>
+                            <h3>More Projects on the Way</h3>
 
                         </div>
 
@@ -446,13 +596,28 @@
 
 
                     <p>
-                        An exploration of visual creativity,
-                        typography, color combinations, and
-                        modern digital interface concepts.
+                        I'm always learning and building. New projects
+                        will show up here as soon as they're ready.
                     </p>
+
+                    <div class="project-tags">
+                        <span>STAY TUNED</span>
+                    </div>
 
                 </article>
 
+
+            </div>
+
+
+            <div class="projects-cta reveal">
+
+                <a href="https://github.com/Bopi123"
+                   class="more-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    SEE MORE ON GITHUB ↗
+                </a>
 
             </div>
 
@@ -460,13 +625,12 @@
 
 
 
-        
         <!-- CONTACT SECTION -->
 
         <section class="contact-section" id="contact">
 
             <div class="section-top reveal">
-                <span>04 / GET IN TOUCH</span>
+                <span>05 / GET IN TOUCH</span>
                 <span>CONTACT INFORMATION</span>
             </div>
 
@@ -491,9 +655,15 @@
                     <div class="contact-item">
                         <span>01 / EMAIL</span>
 
-                        <a href="mailto:icmulles@gmail.com">
-                            icmulles@gmail.com ↗
-                        </a>
+                        <div class="contact-actions">
+
+                            <a href="mailto:icmulles@gmail.com">
+                                icmulles@gmail.com ↗
+                            </a>
+
+                            <button type="button" class="copy-btn" id="copy-email">COPY</button>
+
+                        </div>
                     </div>
 
                     <!-- GITHUB -->
@@ -559,6 +729,9 @@
 
 
     </main>
+
+
+    <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
 
 
     <script src="script.js"></script>

@@ -489,10 +489,11 @@ if ("IntersectionObserver" in window) {
 const terminalBody = document.getElementById("terminal-body");
 
 const terminalLines = [
-    { cmd: "whoami", out: "ivann_mulles" },
-    { cmd: "cat school.txt", out: "TUP–Manila · 2nd year · IT" },
-    { cmd: "cat interests.txt", out: "cybersecurity, programming, web dev" },
-    { cmd: "./status.sh", out: "learning... building... repeat." }
+    { cmd: "Name", out: "Ivann Mulles" },
+    { cmd: "School", out: "Technological University of the Philippines–Manila" },
+    { cmd: "Course", out: "Information Technology, 2nd year" },
+    { cmd: "Interests", out: "Cybersecurity, programming and web development" },
+    { cmd: "Status", out: "Always learning, always building." }
 ];
 
 async function runTerminal() {
@@ -603,6 +604,62 @@ if (hasFinePointer && !reduceMotion) {
     });
 
 }
+
+
+/* =========================
+   PROJECT FILTERS
+========================= */
+
+const filterButtons = document.querySelectorAll(".filter");
+const projectCards = document.querySelectorAll(".project-card");
+const projectCount = document.getElementById("project-count");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(other => {
+
+            const isActive = other === button;
+
+            other.classList.toggle("active", isActive);
+            other.setAttribute("aria-selected", String(isActive));
+
+        });
+
+        let shown = 0;
+
+        projectCards.forEach(card => {
+
+            const matches = filter === "all" || card.dataset.status === filter;
+
+            card.classList.toggle("is-hidden", !matches);
+
+            if (matches) {
+
+                shown++;
+
+                card.classList.remove("filter-in");
+                void card.offsetWidth;
+                card.classList.add("filter-in");
+
+            }
+
+        });
+
+        if (projectCount) {
+
+            projectCount.textContent =
+                "SHOWING " + String(shown).padStart(2, "0") +
+                " OF " + String(projectCards.length).padStart(2, "0");
+
+        }
+
+    });
+
+});
 
 
 /* =========================

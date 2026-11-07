@@ -6,7 +6,7 @@
     --bg: #101010;
     --card: #191919;
     --white: #f5f5ef;
-    --muted: #999990;
+    --muted: #a9a9a0;
     --accent: #c5f467;
     --border: #303030;
 }
@@ -1517,6 +1517,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
+    align-items: stretch;
 }
 
 .org-card {
@@ -1550,16 +1551,16 @@ a {
 .org-card::after {
     content: attr(data-year);
     position: absolute;
-    right: -10px;
-    bottom: -38px;
+    right: -6px;
+    bottom: -22px;
     z-index: -1;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 190px;
+    font-size: 120px;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -8px;
+    letter-spacing: -5px;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(245, 245, 239, .09);
+    -webkit-text-stroke: 1px rgba(245, 245, 239, .06);
     transition: -webkit-text-stroke-color .4s ease;
     pointer-events: none;
 }
@@ -1645,10 +1646,12 @@ a {
 }
 
 .org-desc {
+    position: relative;
+    z-index: 1;
     flex: 1;
-    max-width: 440px;
+    max-width: 400px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
 }
 

@@ -1898,6 +1898,18 @@ a {
 
 .project-soon {
     border-style: dashed;
+    grid-column: 1 / -1;
+}
+
+.project-link {
+    color: var(--accent);
+    transition: text-shadow .3s ease;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-shadow: 0 0 12px rgba(197, 244, 103, .4);
 }
 
 .projects-cta {

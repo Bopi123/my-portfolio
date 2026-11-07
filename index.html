@@ -496,12 +496,27 @@
             </h2>
 
 
-            <div class="project-grid">
+            <div class="project-toolbar reveal">
+
+                <div class="filters" role="tablist" aria-label="Filter projects">
+
+                    <button type="button" class="filter active" data-filter="all" role="tab" aria-selected="true">ALL <i>04</i></button>
+                    <button type="button" class="filter" data-filter="completed" role="tab" aria-selected="false">COMPLETED <i>02</i></button>
+                    <button type="button" class="filter" data-filter="progress" role="tab" aria-selected="false">IN PROGRESS <i>01</i></button>
+
+                </div>
+
+                <span class="project-count" id="project-count">SHOWING 04 OF 04</span>
+
+            </div>
+
+
+            <div class="project-grid" id="project-grid">
 
 
                 <!-- PROJECT 1 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
                     <div class="project-visual visual-one">
 
@@ -512,31 +527,26 @@
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>01 / GAME DEVELOPMENT</span>
-
-                            <h3>Randomized Maze Game</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">GAME DEVELOPMENT</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">01</span>
+                        <h3>Randomized Maze Game</h3>
 
-                    </div>
+                        <p>
+                            A maze game full of twists, featuring randomized
+                            mechanics. This was our final project for
+                            Computer Programming 1.
+                        </p>
 
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Final project</b></li>
+                            <li><span>DETAILS</span><b>Computer Programming 1</b></li>
+                        </ul>
 
-                    <p>
-                        A maze game full of twists, featuring randomized
-                        mechanics. This was our final project for
-                        Computer Programming 1.
-                    </p>
-
-
-                    <div class="project-tags">
-                        <span>COURSE PROJECT</span>
-                        <span>COMPLETED</span>
                     </div>
 
                 </article>
@@ -545,7 +555,7 @@
 
                 <!-- PROJECT 2 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
                     <div class="project-visual visual-two">
 
@@ -556,32 +566,26 @@
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>02 / C++ PROGRAMMING</span>
-
-                            <h3>Arithmetic Quiz Game</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">C++ PROGRAMMING</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">02</span>
+                        <h3>Arithmetic Quiz Game</h3>
 
-                    </div>
+                        <p>
+                            A game made in C++ that tests your arithmetic
+                            skills. This was our final project for
+                            Computer Programming 2.
+                        </p>
 
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Final project</b></li>
+                            <li><span>DETAILS</span><b>C++ · Computer Programming 2</b></li>
+                        </ul>
 
-                    <p>
-                        A game made in C++ that tests your arithmetic
-                        skills. This was our final project for
-                        Computer Programming 2.
-                    </p>
-
-
-                    <div class="project-tags">
-                        <span>C++</span>
-                        <span>COURSE PROJECT</span>
-                        <span>COMPLETED</span>
                     </div>
 
                 </article>
@@ -590,7 +594,7 @@
 
                 <!-- PROJECT 3 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="progress">
 
                     <div class="project-visual visual-three">
 
@@ -601,30 +605,25 @@
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>03 / JAVA · IN PROGRESS</span>
-
-                            <h3>E-Commerce Product Management</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">JAVA PROGRAMMING</span>
+                            <span class="project-status live">IN PROGRESS</span>
                         </div>
 
-                        <span class="project-number">03</span>
+                        <h3>E-Commerce Product Management</h3>
 
-                    </div>
+                        <p>
+                            A product management system built in Java.
+                            Still a work in progress.
+                        </p>
 
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Ongoing project</b></li>
+                            <li><span>DETAILS</span><b>Java · In development</b></li>
+                        </ul>
 
-                    <p>
-                        A product management system built in Java.
-                        Still a work in progress.
-                    </p>
-
-
-                    <div class="project-tags">
-                        <span>JAVA</span>
-                        <span class="live">IN PROGRESS</span>
                     </div>
 
                 </article>
@@ -633,7 +632,7 @@
 
                 <!-- PROJECT 4 -->
 
-                <article class="project-card project-soon reveal">
+                <article class="project-card project-soon reveal" data-status="soon">
 
                     <div class="project-visual visual-four">
 
@@ -644,28 +643,25 @@
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>04 / NEXT UP</span>
-
-                            <h3>More Projects on the Way</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">NEXT UP</span>
+                            <span class="project-status">COMING SOON</span>
                         </div>
 
-                        <span class="project-number">04</span>
+                        <h3>More Projects on the Way</h3>
 
-                    </div>
+                        <p>
+                            I'm always learning and building. New projects
+                            will show up here as soon as they're ready.
+                        </p>
 
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Upcoming</b></li>
+                            <li><span>DETAILS</span><b>Stay tuned</b></li>
+                        </ul>
 
-                    <p>
-                        I'm always learning and building. New projects
-                        will show up here as soon as they're ready.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>STAY TUNED</span>
                     </div>
 
                 </article>

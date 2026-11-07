@@ -2043,45 +2043,42 @@ a {
 
 
 /* =========================
-   VISUAL POLISH LAYER
+   BACKGROUND + LAYOUT POLISH
+   (stronger than before so it is clearly visible)
 ========================= */
 
-/* FAINT COLUMN GRID (fixed, fades top and bottom) */
+/* ---------- 1. BACKGROUND ---------- */
 
+/* Blueprint grid behind everything, fades at top and bottom */
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: min(1250px, 100%);
-    transform: translateX(-50%);
+    inset: 0;
     z-index: -1;
     pointer-events: none;
-    background-image: linear-gradient(90deg, rgba(245, 245, 239, .045) 1px, transparent 1px);
-    background-size: 25% 100%;
-    background-position: 0 0;
-    -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 78%, transparent);
-    mask-image: linear-gradient(180deg, transparent, #000 18%, #000 78%, transparent);
+    background-image:
+        linear-gradient(rgba(197, 244, 103, .075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(197, 244, 103, .075) 1px, transparent 1px);
+    background-size: 72px 72px;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 20%, #000 70%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 20%, #000 70%, transparent 100%);
 }
 
-/* SECOND SOFT GLOW, BOTTOM LEFT */
-
+/* Soft glow in the bottom-left corner */
 .bg-fx::after {
     content: "";
     position: absolute;
-    left: -12vw;
-    bottom: -22vh;
-    width: 60vw;
-    height: 60vw;
-    max-width: 820px;
-    max-height: 820px;
+    left: -10vw;
+    bottom: -18vh;
+    width: 65vw;
+    height: 65vw;
+    max-width: 900px;
+    max-height: 900px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(197, 244, 103, .055), transparent 65%);
+    background: radial-gradient(circle, rgba(197, 244, 103, .13), transparent 65%);
 }
 
-/* HERO: CONCENTRIC RINGS */
-
+/* Hero: large outlined rings */
 .hero {
     position: relative;
 }
@@ -2089,20 +2086,20 @@ body::before {
 .hero::before {
     content: "";
     position: absolute;
-    top: 90px;
-    right: -170px;
-    width: 560px;
-    height: 560px;
+    top: 70px;
+    right: -180px;
+    width: 640px;
+    height: 640px;
     border-radius: 50%;
     z-index: -1;
     pointer-events: none;
     background: repeating-radial-gradient(
         circle,
-        transparent 0 42px,
-        rgba(197, 244, 103, .13) 42px 43px
+        transparent 0 46px,
+        rgba(197, 244, 103, .26) 46px 47px
     );
-    -webkit-mask-image: radial-gradient(circle, #000 25%, transparent 70%);
-    mask-image: radial-gradient(circle, #000 25%, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle, #000 30%, transparent 72%);
+    mask-image: radial-gradient(circle, #000 30%, transparent 72%);
     animation: ringsDrift 18s ease-in-out infinite alternate;
 }
 
@@ -2111,13 +2108,12 @@ body::before {
     to   { transform: translateY(18px) scale(1.04); }
 }
 
-/* FULL-WIDTH TINTED BANDS ON ALTERNATE SECTIONS */
-
+/* Alternating full-width bands so sections read as separate blocks */
 .skills-section::before,
 .orgs-section::before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 40px;
     bottom: 0;
     left: 50%;
     width: 100vw;
@@ -2126,34 +2122,38 @@ body::before {
     pointer-events: none;
     background: linear-gradient(
         180deg,
-        rgba(245, 245, 239, .028),
-        rgba(245, 245, 239, .008)
+        rgba(245, 245, 239, .055),
+        rgba(245, 245, 239, .015)
     );
-    border-top: 1px solid rgba(245, 245, 239, .05);
-    border-bottom: 1px solid rgba(245, 245, 239, .05);
+    border-top: 1px solid rgba(245, 245, 239, .10);
+    border-bottom: 1px solid rgba(245, 245, 239, .10);
 }
 
-.skills-section,
-.orgs-section {
-    padding-bottom: 110px;
-}
-
-/* SOFT SECTION GLOWS */
-
+/* Projects: corner glow so the grid of cards has depth */
 .projects-section {
+    position: relative;
     background:
-        radial-gradient(520px 320px at 88% 6%, rgba(197, 244, 103, .06), transparent 70%),
-        radial-gradient(480px 300px at 6% 70%, rgba(245, 245, 239, .03), transparent 70%);
+        radial-gradient(560px 340px at 90% 4%, rgba(197, 244, 103, .12), transparent 70%),
+        radial-gradient(520px 320px at 4% 75%, rgba(245, 245, 239, .05), transparent 70%);
 }
 
+/* Contact: glow rising from the footer */
 .contact-section {
-    background: radial-gradient(760px 340px at 50% 100%, rgba(197, 244, 103, .07), transparent 70%);
+    background: radial-gradient(820px 380px at 50% 100%, rgba(197, 244, 103, .13), transparent 70%);
 }
 
-/* SECTION HEADER: ACCENT MARKER ON THE RULE */
+/* ---------- 2. ORGANIZATION ---------- */
 
+/* Same vertical rhythm for every section */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* Section header: label on the left, short lime marker on the rule */
 .section-top {
     position: relative;
+    margin-bottom: 55px;
 }
 
 .section-top::after {
@@ -2161,13 +2161,22 @@ body::before {
     position: absolute;
     left: 0;
     bottom: -1px;
-    width: 64px;
-    height: 2px;
+    width: 96px;
+    height: 3px;
     background: var(--accent);
-    box-shadow: 0 0 14px rgba(197, 244, 103, .55);
+    box-shadow: 0 0 16px rgba(197, 244, 103, .6);
 }
 
-/* SKILL ROWS: ACCENT BAR ON HOVER */
+/* Skills sit inside one clear panel instead of floating rows */
+.skills-list {
+    background: rgba(16, 16, 16, .55);
+    border: 1px solid var(--border);
+    padding: 0 18px;
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+}
 
 .skill-row {
     position: relative;
@@ -2182,7 +2191,6 @@ body::before {
     width: 3px;
     background: var(--accent);
     transform: scaleY(0);
-    transform-origin: center;
     transition: transform .3s ease;
 }
 
@@ -2190,10 +2198,13 @@ body::before {
     transform: scaleY(1);
 }
 
-/* PROJECT CARDS: TOP SHEEN + TEXTURED VISUALS */
+/* Project cards: tidy spacing, top sheen, textured visuals */
+.project-grid {
+    gap: 28px;
+}
 
 .project-card {
-    background-image: linear-gradient(180deg, rgba(197, 244, 103, .035), transparent 38%);
+    background-image: linear-gradient(180deg, rgba(197, 244, 103, .06), transparent 40%);
 }
 
 .project-visual::after {
@@ -2202,12 +2213,11 @@ body::before {
     inset: 0;
     pointer-events: none;
     background:
-        repeating-linear-gradient(135deg, rgba(16, 16, 16, .07) 0 1px, transparent 1px 14px),
-        radial-gradient(circle at 85% 12%, rgba(255, 255, 255, .16), transparent 45%);
+        repeating-linear-gradient(135deg, rgba(16, 16, 16, .09) 0 1px, transparent 1px 14px),
+        radial-gradient(circle at 85% 12%, rgba(255, 255, 255, .2), transparent 45%);
 }
 
-/* SLIM, ON-THEME SCROLLBAR */
-
+/* Slim on-theme scrollbar */
 html {
     scrollbar-width: thin;
     scrollbar-color: #3a3a3a var(--bg);
@@ -2230,7 +2240,7 @@ html {
     background: var(--accent);
 }
 
-/* SMALL SCREENS: SIMPLIFY */
+/* ---------- 3. SMALL SCREENS + MOTION ---------- */
 
 @media (max-width: 900px) {
 
@@ -2239,7 +2249,16 @@ html {
     }
 
     body::before {
-        background-size: 50% 100%;
+        background-size: 48px 48px;
+    }
+
+    .section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .skills-list {
+        padding: 0 10px;
     }
 
 }

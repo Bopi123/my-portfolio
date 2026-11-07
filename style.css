@@ -1875,7 +1875,6 @@ a {
 
 .project-soon {
     border-style: dashed;
-    grid-column: 1 / -1;
 }
 
 @media (max-width: 600px) {

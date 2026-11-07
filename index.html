@@ -28,6 +28,12 @@
 
     <div class="scroll-progress" id="scroll-progress"></div>
 
+    <div class="bg-fx" aria-hidden="true">
+        <div class="bg-dots"></div>
+        <div class="bg-glow" id="bg-glow"></div>
+        <div class="bg-noise"></div>
+    </div>
+
 
     <!-- NAVIGATION -->
 
@@ -49,7 +55,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#journey">JOURNEY</a></li>
+                <li><a href="#background">BACKGROUND</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
 
                 <li>
@@ -190,7 +196,7 @@
 
         <!-- ABOUT SECTION -->
 
-        <section class="section" id="about">
+        <section class="section has-num" id="about" data-num="01">
 
             <div class="section-top reveal">
 
@@ -289,7 +295,7 @@
 
         <!-- SKILLS SECTION -->
 
-        <section class="section skills-section" id="skills">
+        <section class="section skills-section has-num" id="skills" data-num="02">
 
             <div class="section-top reveal">
 
@@ -361,53 +367,111 @@
 
 
 
-        <!-- JOURNEY SECTION -->
+        <!-- TECH TICKER -->
 
-        <section class="section journey-section" id="journey">
+        <div class="ticker" aria-hidden="true">
+
+            <div class="ticker-track">
+
+                <span>PYTHON ✳ C++ ✳ JAVA ✳ HTML ✳ CSS ✳ JAVASCRIPT ✳ CYBERSECURITY ✳ </span>
+                <span>PYTHON ✳ C++ ✳ JAVA ✳ HTML ✳ CSS ✳ JAVASCRIPT ✳ CYBERSECURITY ✳ </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BACKGROUND SECTION -->
+
+        <section class="section background-section has-num" id="background" data-num="03">
 
             <div class="section-top reveal">
 
-                <span>03 / MY JOURNEY</span>
-                <span>SO FAR</span>
+                <span>03 / BACKGROUND</span>
+                <span>EDUCATION &amp; SERVICES</span>
 
             </div>
 
 
             <h2 class="section-title reveal">
-                THE <span>ROAD</span> SO FAR.
+                MY <span>BACKGROUND.</span>
             </h2>
 
 
-            <div class="timeline reveal">
+            <div class="bg-layout">
 
-                <div class="timeline-line"></div>
-                <div class="timeline-fill"></div>
+                <article class="edu-card reveal">
 
-                <div class="timeline-item reveal">
-                    <span class="t-tag">TUP–MANILA</span>
-                    <h3>Information Technology</h3>
-                    <p>Studying IT at the Technological University of the Philippines–Manila.</p>
-                </div>
+                    <span class="edu-label">EDUCATION</span>
 
-                <div class="timeline-item reveal" style="transition-delay:.15s">
-                    <span class="t-tag">COMPUTER PROGRAMMING 1</span>
-                    <h3>Randomized Maze Game</h3>
-                    <p>Built a maze game with randomized mechanics as our final project.</p>
-                </div>
+                    <h3>Technological University of the Philippines–Manila</h3>
 
-                <div class="timeline-item reveal" style="transition-delay:.3s">
-                    <span class="t-tag">COMPUTER PROGRAMMING 2</span>
-                    <h3>Arithmetic Quiz Game</h3>
-                    <p>Created a C++ game that tests arithmetic skills as our final project.</p>
-                </div>
+                    <p class="edu-degree">Information Technology</p>
 
-                <div class="timeline-item now reveal" style="transition-delay:.45s">
-                    <span class="t-tag">NOW</span>
-                    <h3>Building in Java</h3>
-                    <p>Working on an E-Commerce Product Management system while exploring cybersecurity.</p>
+                    <div class="edu-meta">
+                        <span>2ND YEAR</span>
+                        <span class="live">CURRENTLY ENROLLED</span>
+                    </div>
+
+                    <div class="edu-courses">
+
+                        <p>COURSEWORK HIGHLIGHTS</p>
+
+                        <ul>
+                            <li>Computer Programming 1</li>
+                            <li>Computer Programming 2</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <div class="service-wrap">
+
+                    <p class="service-label reveal">WHAT I CAN DO</p>
+
+                    <div class="service-grid">
+
+                        <article class="service-card reveal">
+                            <span class="service-num">01</span>
+                            <h3>GAME PROGRAMMING</h3>
+                            <p>Logic-driven programs such as my randomized maze and arithmetic quiz games.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.1s">
+                            <span class="service-num">02</span>
+                            <h3>MANAGEMENT SYSTEMS</h3>
+                            <p>Structured, data-driven apps like my Java product management system.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.2s">
+                            <span class="service-num">03</span>
+                            <h3>WEB PAGES</h3>
+                            <p>Clean, interactive pages built with HTML, CSS and JavaScript.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.3s">
+                            <span class="service-num">04</span>
+                            <h3>SECURITY AWARENESS</h3>
+                            <p>Learning how systems are attacked and defended to build safer software.</p>
+                        </article>
+
+                    </div>
+
                 </div>
 
             </div>
+
+
+            <a href="#contact" class="cta-band reveal">
+
+                <span class="cta-text">HAVE AN OPPORTUNITY IN MIND?</span>
+
+                <span class="cta-action">LET'S TALK <b>↗</b></span>
+
+            </a>
 
         </section>
 
@@ -415,7 +479,7 @@
 
         <!-- PROJECTS SECTION -->
 
-        <section class="section projects-section" id="projects">
+        <section class="section projects-section has-num" id="projects" data-num="04">
 
             <div class="section-top reveal">
 

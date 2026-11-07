@@ -473,17 +473,20 @@ a {
     color: #101010;
 }
 
-.visual-one > span {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 95px;
+/* Shared size for all project visuals so every card matches */
+
+.project-visual > span {
+    font-size: 18px;
     font-weight: 700;
 }
 
-.visual-one > div {
-    font-size: 12px;
+.project-visual > div {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 60px;
     font-weight: 700;
-    letter-spacing: 5px;
+    line-height: 1;
     text-align: center;
+    margin-top: 20px;
 }
 
 .visual-two {
@@ -493,37 +496,11 @@ a {
 
 .visual-two > span {
     color: var(--accent);
-    font-size: 18px;
-}
-
-.visual-two > div {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-top: 20px;
 }
 
 .visual-three {
     background: #c5f467;
     color: #101010;
-}
-
-.visual-three > span,
-.visual-four > span {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.visual-three > div,
-.visual-four > div {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 65px;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-top: 20px;
 }
 
 .visual-four {
@@ -1899,6 +1876,14 @@ a {
 .project-soon {
     border-style: dashed;
     grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+
+    .project-visual > div {
+        font-size: 38px;
+    }
+
 }
 
 .project-link {

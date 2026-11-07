@@ -140,7 +140,7 @@ if (cursorDot && cursorOutline && hasFinePointer) {
     document.addEventListener("mouseover", event => {
 
         if (event.target.closest(
-            "a, button, .project-card, .skill-row, .focus-card, .service-card, .edu-card, .cta-band, .stat"
+            "a, button, .project-card, .skill-row, .focus-card, .service-card, .edu-card, .org-card, .cta-band, .stat"
         )) {
 
             cursorOutline.classList.add("cursor-hover");

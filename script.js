@@ -140,7 +140,7 @@ if (cursorDot && cursorOutline && hasFinePointer) {
     document.addEventListener("mouseover", event => {
 
         if (event.target.closest(
-            "a, button, .project-card, .skill-row, .focus-card, .timeline-item, .stat"
+            "a, button, .project-card, .skill-row, .focus-card, .service-card, .edu-card, .cta-band, .stat"
         )) {
 
             cursorOutline.classList.add("cursor-hover");
@@ -644,6 +644,43 @@ if (copyButton) {
         }, 1800);
 
     });
+
+}
+
+
+/* =========================
+   AMBIENT GLOW FOLLOWS CURSOR
+========================= */
+
+const bgGlow = document.getElementById("bg-glow");
+
+if (bgGlow && hasFinePointer && !reduceMotion) {
+
+    let targetX = window.innerWidth * 0.62;
+    let targetY = window.innerHeight * 0.14;
+    let glowX = targetX;
+    let glowY = targetY;
+
+    document.addEventListener("mousemove", event => {
+
+        targetX = event.clientX;
+        targetY = event.clientY;
+
+    });
+
+    function moveGlow() {
+
+        glowX += (targetX - glowX) * 0.06;
+        glowY += (targetY - glowY) * 0.06;
+
+        bgGlow.style.setProperty("--gx", glowX + "px");
+        bgGlow.style.setProperty("--gy", glowY + "px");
+
+        requestAnimationFrame(moveGlow);
+
+    }
+
+    moveGlow();
 
 }
 

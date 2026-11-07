@@ -496,6 +496,26 @@ const terminalLines = [
     { cmd: "Status", out: "Always learning, always building." }
 ];
 
+// Types text into an element one character at a time, with a caret that follows
+async function typeInto(target, text, speed) {
+
+    const caret = document.createElement("span");
+
+    caret.className = "caret";
+    target.appendChild(caret);
+
+    for (const character of text) {
+
+        target.insertBefore(document.createTextNode(character), caret);
+
+        await sleep(reduceMotion ? 0 : speed);
+
+    }
+
+    caret.remove();
+
+}
+
 async function runTerminal() {
 
     for (const line of terminalLines) {
@@ -511,26 +531,23 @@ async function runTerminal() {
         row.append(prompt, command);
         terminalBody.appendChild(row);
 
-        for (const character of line.cmd) {
-
-            command.textContent += character;
-
-            await sleep(reduceMotion ? 0 : 55);
-
-        }
-
-        await sleep(reduceMotion ? 0 : 250);
-
-        const output = document.createElement("div");
-
-        output.className = "t-out";
-        output.textContent = line.out;
-
-        terminalBody.appendChild(output);
+        // Field name (Name, School, ...)
+        await typeInto(command, line.cmd, 75);
 
         await sleep(reduceMotion ? 0 : 350);
 
+        // Value (Ivann Mulles, TUP-Manila, ...)
+        const output = document.createElement("div");
+
+        output.className = "t-out";
+        terminalBody.appendChild(output);
+
+        await typeInto(output, line.out, 42);
+
+        await sleep(reduceMotion ? 0 : 450);
+
     }
+
 
     const endRow = document.createElement("div");
     const endPrompt = document.createElement("span");

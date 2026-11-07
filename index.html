@@ -26,6 +26,14 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <div class="bg-fx" aria-hidden="true">
+        <div class="bg-dots"></div>
+        <div class="bg-glow" id="bg-glow"></div>
+        <div class="bg-noise"></div>
+    </div>
+
 
     <!-- NAVIGATION -->
 
@@ -47,6 +55,8 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#background">BACKGROUND</a></li>
+                <li><a href="#organizations">ORGANIZATIONS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
 
                 <li>
@@ -83,13 +93,18 @@
 
                 <div class="hero-text reveal">
 
-                    <p class="eyebrow">HELLO, I'M</p>
+                    <p class="eyebrow" id="greeting">HELLO, I'M</p>
 
                     <h1>
                         IVANN<span class="outline">.</span>
                         <br>
                         <span class="surname">MULLES</span>
                     </h1>
+
+
+                    <p class="role-line">
+                        <span class="role-prefix">&gt;</span><span id="typed"></span><span class="caret"></span>
+                    </p>
 
 
                     <div class="hero-bottom">
@@ -148,9 +163,41 @@
 
 
 
+        <!-- QUICK FACTS -->
+
+        <section class="stats" id="stats" aria-label="Quick facts">
+
+            <div class="stats-grid">
+
+                <div class="stat reveal">
+                    <b class="count" data-target="2">00</b>
+                    <span>YEAR LEVEL · IT</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.1s">
+                    <b class="count" data-target="5">00</b>
+                    <span>PROJECTS</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.2s">
+                    <b class="count" data-target="5">00</b>
+                    <span>SKILLS &amp; TOOLS</span>
+                </div>
+
+                <div class="stat reveal" style="transition-delay:.3s">
+                    <b>∞</b>
+                    <span>CURIOSITY</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
         <!-- ABOUT SECTION -->
 
-        <section class="section" id="about">
+        <section class="section has-num" id="about" data-num="01">
 
             <div class="section-top reveal">
 
@@ -204,13 +251,52 @@
 
             </div>
 
+
+            <div class="about-extra">
+
+                <div class="terminal reveal" id="terminal" aria-label="Decorative terminal introducing Ivann">
+
+                    <div class="terminal-bar">
+                        <i></i><i></i><i></i>
+                        <span>ivann@portfolio:~</span>
+                    </div>
+
+                    <div class="terminal-body" id="terminal-body"></div>
+
+                </div>
+
+
+                <div class="focus-grid">
+
+                    <article class="focus-card reveal">
+                        <span>01</span>
+                        <h3>CYBERSECURITY</h3>
+                        <p>A keen interest I want to dig deeper into.</p>
+                    </article>
+
+                    <article class="focus-card reveal" style="transition-delay:.1s">
+                        <span>02</span>
+                        <h3>PROGRAMMING</h3>
+                        <p>Python, C++ and Java, building logic and problem-solving skills.</p>
+                    </article>
+
+                    <article class="focus-card reveal" style="transition-delay:.2s">
+                        <span>03</span>
+                        <h3>EXPLORING IT</h3>
+                        <p>Actively exploring diverse fields to expand my knowledge.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
 
 
         <!-- SKILLS SECTION -->
 
-        <section class="section skills-section" id="skills">
+        <section class="section skills-section has-num" id="skills" data-num="02">
 
             <div class="section-top reveal">
 
@@ -282,13 +368,209 @@
 
 
 
-        <!-- PROJECTS SECTION -->
+        <!-- TECH TICKER -->
 
-        <section class="section projects-section" id="projects">
+        <div class="ticker" aria-hidden="true">
+
+            <div class="ticker-track">
+
+                <span>PYTHON ✳ C++ ✳ JAVA ✳ HTML ✳ CSS ✳ JAVASCRIPT ✳ CYBERSECURITY ✳ </span>
+                <span>PYTHON ✳ C++ ✳ JAVA ✳ HTML ✳ CSS ✳ JAVASCRIPT ✳ CYBERSECURITY ✳ </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BACKGROUND SECTION -->
+
+        <section class="section background-section has-num" id="background" data-num="03">
 
             <div class="section-top reveal">
 
-                <span>03 / SELECTED WORK</span>
+                <span>03 / BACKGROUND</span>
+                <span>EDUCATION &amp; SERVICES</span>
+
+            </div>
+
+
+            <h2 class="section-title reveal">
+                MY <span>BACKGROUND.</span>
+            </h2>
+
+
+            <div class="bg-layout">
+
+                <article class="edu-card reveal">
+
+                    <span class="edu-label">EDUCATION</span>
+
+                    <h3>Technological University of the Philippines–Manila</h3>
+
+                    <p class="edu-degree">Information Technology</p>
+
+                    <div class="edu-meta">
+                        <span>2ND YEAR</span>
+                        <span class="live">CURRENTLY ENROLLED</span>
+                    </div>
+
+                    <div class="edu-courses">
+
+                        <p>COURSEWORK HIGHLIGHTS</p>
+
+                        <ul>
+                            <li>Computer Programming 1</li>
+                            <li>Computer Programming 2</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <div class="service-wrap">
+
+                    <p class="service-label reveal">WHAT I CAN DO</p>
+
+                    <div class="service-grid">
+
+                        <article class="service-card reveal">
+                            <span class="service-num">01</span>
+                            <h3>GAME PROGRAMMING</h3>
+                            <p>Logic-driven programs such as my randomized maze and arithmetic quiz games.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.1s">
+                            <span class="service-num">02</span>
+                            <h3>MANAGEMENT SYSTEMS</h3>
+                            <p>Structured, data-driven apps like my Java product management system.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.2s">
+                            <span class="service-num">03</span>
+                            <h3>WEB PAGES</h3>
+                            <p>Clean, interactive pages built with HTML, CSS and JavaScript.</p>
+                        </article>
+
+                        <article class="service-card reveal" style="transition-delay:.3s">
+                            <span class="service-num">04</span>
+                            <h3>SECURITY AWARENESS</h3>
+                            <p>Learning how systems are attacked and defended to build safer software.</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#contact" class="cta-band reveal">
+
+                <span class="cta-text">HAVE AN OPPORTUNITY IN MIND?</span>
+
+                <span class="cta-action">LET'S TALK <b>↗</b></span>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- ORGANIZATIONS SECTION -->
+
+        <section class="section orgs-section has-num" id="organizations" data-num="04">
+
+            <div class="section-top reveal">
+
+                <span>04 / ORGANIZATIONS</span>
+                <span>COMMUNITIES I'M PART OF</span>
+
+            </div>
+
+
+            <h2 class="section-title reveal">
+                MY <span>ORGANIZATIONS.</span>
+            </h2>
+
+
+            <div class="org-grid">
+
+                <article class="org-card reveal" data-year="2026">
+
+                    <div class="org-top">
+                        <span class="org-logo" role="img" aria-label="GDGoC logo mark">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="32" cy="32" r="29" fill="rgba(197,244,103,.07)" stroke-width="1.5"/>
+                                <path d="M25 22 L15 32 L25 42"/>
+                                <path d="M39 22 L49 32 L39 42"/>
+                                <path d="M35 20 L29 44"/>
+                            </svg>
+                        </span>
+                        <span class="org-term live">2026–2027 · CURRENT</span>
+                    </div>
+
+                    <p class="org-role">MEMBER</p>
+
+                    <h3>Google Developer Group on Campus (GDGoC) – TUPM</h3>
+
+                    <p class="org-desc">
+                        A campus tech community at TUP Manila where I learn
+                        and grow alongside fellow aspiring developers.
+                    </p>
+
+                    <div class="org-tags">
+                        <span>TECH COMMUNITY</span>
+                        <span>TUP MANILA</span>
+                    </div>
+
+                </article>
+
+
+                <article class="org-card reveal" style="transition-delay:.12s" data-year="2025">
+
+                    <div class="org-top">
+                        <span class="org-logo" role="img" aria-label="DOST Scholars Club logo mark">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="32" cy="32" r="29" fill="rgba(197,244,103,.07)" stroke-width="1.5"/>
+                                <path d="M32 17 L52 27 L32 37 L12 27 Z"/>
+                                <path d="M21 32 V41 C26 46 38 46 43 41 V32"/>
+                                <path d="M52 27 V39"/>
+                            </svg>
+                        </span>
+                        <span class="org-term">2025–2026</span>
+                    </div>
+
+                    <p class="org-role">LOGISTICS MEMBER</p>
+
+                    <h3>DOST Scholars Club – TUPM</h3>
+
+                    <p class="org-desc">
+                        A club for DOST scholars at TUP Manila, where I served
+                        as a logistics member supporting its activities.
+                    </p>
+
+                    <div class="org-tags">
+                        <span>SCHOLARS CLUB</span>
+                        <span>TUP MANILA</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS SECTION -->
+
+        <section class="section projects-section has-num" id="projects" data-num="05">
+
+            <div class="section-top reveal">
+
+                <span>05 / SELECTED WORK</span>
                 <span>MY PROJECTS</span>
 
             </div>
@@ -301,42 +583,58 @@
             </h2>
 
 
-            <div class="project-grid">
+            <div class="project-toolbar reveal">
+
+                <div class="filters" role="tablist" aria-label="Filter projects">
+
+                    <button type="button" class="filter active" data-filter="all" role="tab" aria-selected="true">ALL <i>06</i></button>
+                    <button type="button" class="filter" data-filter="completed" role="tab" aria-selected="false">COMPLETED <i>04</i></button>
+                    <button type="button" class="filter" data-filter="progress" role="tab" aria-selected="false">IN PROGRESS <i>01</i></button>
+
+                </div>
+
+                <span class="project-count" id="project-count">SHOWING 06 OF 06</span>
+
+            </div>
+
+
+            <div class="project-grid" id="project-grid">
 
 
                 <!-- PROJECT 1 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
                     <div class="project-visual visual-one">
 
                         <span>01</span>
 
-                        <div>RANDOMIZED<br>MAZE GAME</div>
+                        <div>MAZE OF THE<br>CURSED MIND</div>
 
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>01 / GAME DEVELOPMENT</span>
-
-                            <h3>Randomized Maze Game</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">C PROGRAMMING</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">01</span>
+                        <h3>Maze of the Cursed Mind</h3>
+
+                        <p>
+                            A maze game full of twists, featuring randomized
+                            mechanics. This was our final project for
+                            Computer Programming 1.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Final project · Computer Programming 1</b></li>
+                            <li><span>SOURCE CODE</span><b><a href="https://github.com/Bopi123/Maze-of-the-Cursed-Mind/blob/main/test.c" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></b></li>
+                        </ul>
 
                     </div>
-
-
-                    <p>
-                        A maze game full of twists, featuring randomized
-                        mechanics. This was our final project for
-                        Computer Programming 1.
-                    </p>
 
                 </article>
 
@@ -344,7 +642,7 @@
 
                 <!-- PROJECT 2 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
                     <div class="project-visual visual-two">
 
@@ -355,26 +653,27 @@
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>02 / C++ PROGRAMMING</span>
-
-                            <h3>Arithmetic Quiz Game</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">C++ PROGRAMMING</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">02</span>
+                        <h3>Arithmetic Quiz Game</h3>
+
+                        <p>
+                            A game made in C++ that tests your arithmetic
+                            skills. This was our final project for
+                            Computer Programming 2.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Final project</b></li>
+                            <li><span>DETAILS</span><b>C++ · Computer Programming 2</b></li>
+                        </ul>
 
                     </div>
-
-
-                    <p>
-                        A game made in C++ that tests your arithmetic
-                        skills. This was our final project for
-                        Computer Programming 2.
-                    </p>
 
                 </article>
 
@@ -382,36 +681,38 @@
 
                 <!-- PROJECT 3 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
-                    <div class="project-visual visual-three">
+                    <div class="project-visual visual-two">
 
                         <span>03</span>
 
-                        <div>E-COMMERCE<br>SYSTEM</div>
+                        <div>DIGIPAWS</div>
 
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>03 / JAVA · IN PROGRESS</span>
-
-                            <h3>E-Commerce Product Management</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">WEB DESIGN · UI/UX</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">03</span>
+                        <h3>DigiPaws</h3>
+
+                        <p>
+                            A veterinary clinic website that lets pet owners meet
+                            the doctors, book appointments and browse events, built
+                            with usability in mind.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Final project · Human Computer Interaction</b></li>
+                            <li><span>LIVE SITE</span><b><a href="https://digipawsweb.wixstudio.com/my-site-5?rc=test-site" class="project-link" target="_blank" rel="noopener noreferrer">View website ↗</a></b></li>
+                        </ul>
 
                     </div>
-
-
-                    <p>
-                        A product management system built in Java.
-                        Still a work in progress.
-                    </p>
 
                 </article>
 
@@ -419,77 +720,129 @@
 
                 <!-- PROJECT 4 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="progress">
 
-                    <div class="project-visual visual-four">
+                    <div class="project-visual visual-three">
 
                         <span>04</span>
 
-                        <div>CREATIVE<br>IDEAS</div>
+                        <div>E-COMMERCE<br>SYSTEM</div>
 
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>04 / CREATIVE PROJECT</span>
-
-                            <h3>Digital Design Experiments</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">JAVA PROGRAMMING</span>
+                            <span class="project-status live">IN PROGRESS</span>
                         </div>
 
-                        <span class="project-number">04</span>
+                        <h3>E-Commerce Product Management</h3>
+
+                        <p>
+                            A product management system built in Java.
+                            Still a work in progress.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Ongoing project</b></li>
+                            <li><span>DETAILS</span><b>Java · In development</b></li>
+                        </ul>
 
                     </div>
 
-
-                    <p>
-                        An exploration of visual creativity,
-                        typography, color combinations, and
-                        modern digital interface concepts.
-                    </p>
-
                 </article>
+
 
 
                 <!-- PROJECT 5 -->
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-status="completed">
 
-                    <div class="project-visual visual-two">
+                    <div class="project-visual visual-one">
 
                         <span>05</span>
 
-                        <div>SHOP<br>RECEIPT</div>
+                        <div>WEATHER<br>APP</div>
 
                     </div>
 
 
-                    <div class="project-info">
+                    <div class="project-body">
 
-                        <div>
-
-                            <span>05 / C PROGRAMMING</span>
-
-                            <h3>Shop Receipt Generator</h3>
-
+                        <div class="project-head">
+                            <span class="project-cat">PYTHON · GUI APP</span>
+                            <span class="project-status done">COMPLETED</span>
                         </div>
 
-                        <span class="project-number">05</span>
+                        <h3>Weather App</h3>
+
+                        <p>
+                            A desktop app built with Python and PyQt5 that shows a
+                            city's current temperature, weather emoji and description
+                            using the OpenWeatherMap API.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Personal practice project</b></li>
+                            <li><span>SOURCE CODE</span><b><a href="https://github.com/Bopi123/Weather-App/blob/main/weatherApp.py" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></b></li>
+                        </ul>
 
                     </div>
-
-
-                    <p>
-                        A C program that turns a shopping transaction into
-                        a clean, itemized receipt. This was our final
-                        project for Computer Programming 1.
-                    </p>
 
                 </article>
 
+
+
+                <!-- PROJECT 6 -->
+
+                <article class="project-card project-soon reveal" data-status="soon">
+
+                    <div class="project-visual visual-four">
+
+                        <span>06</span>
+
+                        <div>COMING<br>SOON</div>
+
+                    </div>
+
+
+                    <div class="project-body">
+
+                        <div class="project-head">
+                            <span class="project-cat">NEXT UP</span>
+                            <span class="project-status">COMING SOON</span>
+                        </div>
+
+                        <h3>More Projects on the Way</h3>
+
+                        <p>
+                            I'm always learning and building. New projects
+                            will show up here as soon as they're ready.
+                        </p>
+
+                        <ul class="project-facts">
+                            <li><span>TYPE</span><b>Upcoming</b></li>
+                            <li><span>DETAILS</span><b>Stay tuned</b></li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="projects-cta reveal">
+
+                <a href="https://github.com/Bopi123"
+                   class="more-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    SEE MORE ON GITHUB ↗
+                </a>
 
             </div>
 
@@ -497,13 +850,12 @@
 
 
 
-        
         <!-- CONTACT SECTION -->
 
         <section class="contact-section" id="contact">
 
             <div class="section-top reveal">
-                <span>04 / GET IN TOUCH</span>
+                <span>06 / GET IN TOUCH</span>
                 <span>CONTACT INFORMATION</span>
             </div>
 
@@ -528,9 +880,15 @@
                     <div class="contact-item">
                         <span>01 / EMAIL</span>
 
-                        <a href="mailto:icmulles@gmail.com">
-                            icmulles@gmail.com ↗
-                        </a>
+                        <div class="contact-actions">
+
+                            <a href="mailto:icmulles@gmail.com">
+                                icmulles@gmail.com ↗
+                            </a>
+
+                            <button type="button" class="copy-btn" id="copy-email">COPY</button>
+
+                        </div>
                     </div>
 
                     <!-- GITHUB -->
@@ -596,6 +954,9 @@
 
 
     </main>
+
+
+    <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
 
 
     <script src="script.js"></script>
